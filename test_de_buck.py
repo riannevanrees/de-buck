@@ -52,3 +52,10 @@ def test_citeer_artikel():
     correcte_citatie += black("History and Anthropology", "italic")
     correcte_citatie += " 25:2 (2014) 171-188."
     assert resultaat == correcte_citatie
+
+
+def test_citeer_website():
+    correcte_citatie = "Internet encyclopedia of philosophy, https://www.iep.utm.edu (geraadpleegd 15 augustus 2014)."
+    resultaat = de_buck.citeer_website("Internet encyclopedia of philosophy", "https://www.iep.utm.edu",
+                                       "15 augustus 2014")
+    assert correcte_citatie == resultaat
