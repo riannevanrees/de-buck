@@ -5,7 +5,7 @@ def citeer_auteur(auteur):
     # Meerdere auteurs hebben het volgende format: auteur1, auteur2 en auteur3.
     # Er staat geen leesteken of spatie achter.
     if type(auteur) is list:
-        citatie = ", ".join(auteur[0,-1])
+        citatie = ", ".join(auteur[0:-1])
         citatie += " en {}".format(auteur[-1])
     else:
         citatie = auteur
@@ -107,7 +107,6 @@ if __name__ == "__main__":
                               jaar=2019,
                               paginanummers=(225, 251),
                               doi="https://doi.org/10.1017/S0068113X19000321",
-                              enkele_auteur=False
                               )
     #print(citatie2)
     citatie3 = citeer_website(website="Vindolanda tablets online",
@@ -126,7 +125,6 @@ if __name__ == "__main__":
                            jaar = "1995")
     print(citatie5)
     citatie6 = citeer_artikel(auteur = ["David Ingles", "Roland Robertson"],
-                              enkele_auteur = False,
                               titel = "From republican virtue to global imaginary",
                               subtitel = "Changing visions of the historian Polybius",
                               tijdschrift = "History of the human sciences",
