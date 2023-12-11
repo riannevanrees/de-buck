@@ -10,10 +10,9 @@ def test_citeer_boek_eerste_druk():
         jaar="1919"
         )
     correcte_citatie = "J. Huizinga, "
-    correcte_citatie += black("Herfsttij der Middeleeuwen", "italic")
-    correcte_citatie += ". "
-    subtitel = "Studie over levens- en gedachtenvormen der veertiende en vijftiende eeuw in Frankrijk en de Nederlanden"
-    correcte_citatie += black(subtitel, "italic")
+    titel = "Herfsttij der Middeleeuwen. "
+    titel += "Studie over levens- en gedachtenvormen der veertiende en vijftiende eeuw in Frankrijk en de Nederlanden"
+    correcte_citatie += black(titel, "italic")
     correcte_citatie += " (Haarlem 1919)."
     assert resultaat == correcte_citatie
 
@@ -28,10 +27,9 @@ def test_citeer_boek_latere_druk():
         jaar="2012"
         )
     correcte_citatie = "J. Huizinga, "
-    correcte_citatie += black("Herfsttij der Middeleeuwen", "italic")
-    correcte_citatie += ". "
-    subtitel = "Studie over levens- en gedachtenvormen der veertiende en vijftiende eeuw in Frankrijk en de Nederlanden"
-    correcte_citatie += black(subtitel, "italic")
+    titel = "Herfsttij der Middeleeuwen. "
+    titel += "Studie over levens- en gedachtenvormen der veertiende en vijftiende eeuw in Frankrijk en de Nederlanden"
+    correcte_citatie += black(titel, "italic")
     correcte_citatie += " (33e druk; Amsterdam 2012)."
     assert resultaat == correcte_citatie
 
@@ -59,3 +57,5 @@ def test_citeer_website():
     resultaat = de_buck.citeer_website("Internet encyclopedia of philosophy", "https://www.iep.utm.edu",
                                        "15 augustus 2014")
     assert correcte_citatie == resultaat
+
+
